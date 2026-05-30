@@ -9,6 +9,11 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 ├── index.html
 ├── style.css
 ├── images/
+├── bread/
+├── photos/
+├── words/
+├── postcards/
+├── beats/
 └── README.md
 ```
 
@@ -22,13 +27,27 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 
 トップの短い文章内の言葉だけをリンクにしています。
 
-* `パン` → `#bread`
-* `写真` → `#photos`
-* `言葉` → `#words`
-* `ハガキ` → `#postcards`
-* `ビート` → `#beats`
+* `パン` → `/bread/`
+* `写真` → `/photos/`
+* `言葉` → `/words/`
+* `ハガキ` → `/postcards/`
+* `ビート` → `/beats/`
 
-今は同じページ内の小さな入口です。内容が増えてきたら、個別ページに分けられます。
+それぞれ独立したページです。投稿が増えたら、各ページ内の `.entry-list` に `<article class="entry">` を追加します。
+
+## 名前とURL
+
+サイト上の表示名は `parklifeduck` にしています。
+
+GitHub PagesのURLはGitHubユーザー名とリポジトリ名に連動します。今の公開URLは:
+
+```text
+https://parklifehack.github.io/
+```
+
+URL自体を `https://parklifeduck.github.io/` にしたい場合は、GitHubのユーザー名を `parklifeduck` に変更し、リポジトリ名も `parklifeduck.github.io` に変更します。
+
+ユーザー名を変えない場合は、独自ドメインを使う方法もあります。
 
 ## 公開方法
 

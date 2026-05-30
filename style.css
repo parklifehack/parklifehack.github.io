@@ -75,33 +75,62 @@ body {
   text-decoration-color: #b9b1a7;
 }
 
-.topics {
+.subpage {
   width: min(100%, 680px);
   margin: 0 auto;
-  padding: 30px 0 72px;
-  display: grid;
-  gap: 12px;
 }
 
-.topic {
-  scroll-margin-top: 28px;
-  padding: 28px 0;
+.back-link {
+  display: inline-block;
+  margin: 0 0 42px;
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--ink);
+}
+
+.page-title {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 8vw, 52px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.page-note {
+  max-width: 31em;
+  margin: 0 0 56px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.entry-list {
+  display: grid;
+  gap: 0;
+}
+
+.entry {
+  padding: 26px 0;
   border-top: 1px solid var(--line);
 }
 
-.topic-label {
+.entry time,
+.entry-label {
+  display: block;
   margin: 0 0 4px;
   color: var(--muted);
   font-size: 12px;
 }
 
-.topic h2 {
+.entry h2 {
   margin: 0 0 8px;
   font-size: 20px;
   font-weight: 400;
 }
 
-.topic p {
+.entry p {
   max-width: 31em;
   margin: 0;
   color: var(--muted);
