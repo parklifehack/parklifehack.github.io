@@ -14,6 +14,11 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 ├── words/
 ├── postcards/
 ├── beats/
+│   ├── volume-1/
+│   └── volume-2/
+├── audio/
+│   ├── beat-tape-volume-1/
+│   └── beat-tape-volume-2/
 └── README.md
 ```
 
@@ -34,6 +39,40 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 * `ビート` → `/beats/`
 
 それぞれ独立したページです。投稿が増えたら、各ページ内の `.entry-list` に `<article class="entry">` を追加します。
+
+## ビートテープに曲を追加する
+
+ビートテープ用のページは以下です。
+
+* `Beat Tape Volume 1` → `/beats/volume-1/`
+* `Beat Tape Volume 2` → `/beats/volume-2/`
+
+音源ファイルは以下に置きます。
+
+* Volume 1: `audio/beat-tape-volume-1/`
+* Volume 2: `audio/beat-tape-volume-2/`
+
+ファイル名は、スペースなしの半角英数字にします。
+
+```text
+audio/beat-tape-volume-1/01-night-loop.mp3
+audio/beat-tape-volume-1/02-window-light.mp3
+```
+
+曲をページに表示するには、該当する `beats/volume-1/index.html` または `beats/volume-2/index.html` の `.track-list` 内に、以下の形で追加します。
+
+```html
+<article class="track">
+  <div class="track-text">
+    <span class="entry-label">track 01</span>
+    <h2>Night Loop</h2>
+    <p>1:12 / 2026</p>
+  </div>
+  <audio controls preload="none" src="../../audio/beat-tape-volume-1/01-night-loop.mp3"></audio>
+</article>
+```
+
+WAVはサイズが大きくなりやすいので、公開用はMP3かM4Aがおすすめです。GitHubは大きいファイルに向いていないため、1曲あたり数MBから十数MB程度に抑えるのが扱いやすいです。
 
 ## 名前とURL
 
