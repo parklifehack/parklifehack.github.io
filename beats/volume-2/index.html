@@ -14,40 +14,40 @@
       <h1 class="page-title">Beat Tape Volume 2</h1>
       <p class="page-note">次に残しておく音のまとまり。</p>
 
-      <div class="track-list">
-        <article class="track">
-          <div class="track-text">
-            <span class="entry-label">track 01</span>
-            <h2>find my wings again</h2>
+      <div class="album-player" data-player>
+        <div class="album-now">
+          <div class="album-current-wrap">
+            <span class="entry-label">now playing</span>
+            <p class="album-current" data-current-title>01 / find my wings again</p>
           </div>
-          <audio controls preload="none" src="../../audio/beat-tape-volume-2/01-find-my-wings-again.mp3"></audio>
-        </article>
+          <audio controls preload="none" data-audio src="../../audio/beat-tape-volume-2/01-find-my-wings-again.mp3"></audio>
+        </div>
 
-        <article class="track">
-          <div class="track-text">
-            <span class="entry-label">track 02</span>
-            <h2>misty wave</h2>
-          </div>
-          <audio controls preload="none" src="../../audio/beat-tape-volume-2/02-misty-wave.mp3"></audio>
-        </article>
-
-        <article class="track">
-          <div class="track-text">
-            <span class="entry-label">track 03</span>
-            <h2>joey</h2>
-          </div>
-          <audio controls preload="none" src="../../audio/beat-tape-volume-2/03-joey.mp3"></audio>
-        </article>
-
-        <article class="track">
-          <div class="track-text">
-            <span class="entry-label">track 04</span>
-            <h2>trip to San Francisco</h2>
-          </div>
-          <audio controls preload="none" src="../../audio/beat-tape-volume-2/04-trip-to-san-francisco.mp3"></audio>
-        </article>
+        <ol class="album-track-list">
+          <li class="album-track is-active" data-src="../../audio/beat-tape-volume-2/01-find-my-wings-again.mp3" data-title="find my wings again">
+            <button class="track-play" type="button" aria-label="find my wings againを再生">▶</button>
+            <span class="track-number">01</span>
+            <span class="track-title">find my wings again</span>
+          </li>
+          <li class="album-track" data-src="../../audio/beat-tape-volume-2/02-misty-wave.mp3" data-title="misty wave">
+            <button class="track-play" type="button" aria-label="misty waveを再生">▶</button>
+            <span class="track-number">02</span>
+            <span class="track-title">misty wave</span>
+          </li>
+          <li class="album-track" data-src="../../audio/beat-tape-volume-2/03-joey.mp3" data-title="joey">
+            <button class="track-play" type="button" aria-label="joeyを再生">▶</button>
+            <span class="track-number">03</span>
+            <span class="track-title">joey</span>
+          </li>
+          <li class="album-track" data-src="../../audio/beat-tape-volume-2/04-trip-to-san-francisco.mp3" data-title="trip to San Francisco">
+            <button class="track-play" type="button" aria-label="trip to San Franciscoを再生">▶</button>
+            <span class="track-number">04</span>
+            <span class="track-title">trip to San Francisco</span>
+          </li>
+        </ol>
       </div>
     </section>
   </main>
+  <script src="../player.js"></script>
 </body>
 </html>
