@@ -11,7 +11,7 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 ├── images/
 ├── bread/
 ├── photos/
-├── words/
+├── books/
 ├── postcards/
 ├── beats/
 │   ├── volume-1/
@@ -34,7 +34,7 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 
 * `パン` → `/bread/`
 * `写真` → `/photos/`
-* `言葉` → `/words/`
+* `本` → `/books/`
 * `ハガキ` → `/postcards/`
 * `ビート` → `/beats/`
 

@@ -93,17 +93,10 @@ body {
 }
 
 .page-title {
-  margin: 0 0 8px;
+  margin: 0 0 42px;
   font-size: clamp(28px, 8vw, 52px);
   font-weight: 400;
   line-height: 1.15;
-}
-
-.page-note {
-  max-width: 31em;
-  margin: 0 0 56px;
-  color: var(--muted);
-  font-size: 15px;
 }
 
 .entry-list {
@@ -128,6 +121,10 @@ body {
   margin: 0 0 8px;
   font-size: 20px;
   font-weight: 400;
+}
+
+.entry h2:last-child {
+  margin-bottom: 0;
 }
 
 .entry h2 a {
