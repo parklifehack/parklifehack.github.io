@@ -166,7 +166,7 @@ body {
 
 .postcard-entry {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(160px, 220px);
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
   gap: 28px;
   padding: 30px 0;
   border-top: 1px solid var(--line);
@@ -352,6 +352,6 @@ body {
   }
 
   .postcard-photo {
-    max-width: 240px;
+    max-width: 100%;
   }
 }
