@@ -145,6 +145,72 @@ body {
   font-size: 15px;
 }
 
+.postcard-project {
+  border-top: 1px solid var(--line);
+}
+
+.project-heading {
+  padding: 26px 0 18px;
+}
+
+.project-heading h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.postcard-list {
+  display: grid;
+  gap: 0;
+}
+
+.postcard-entry {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(160px, 220px);
+  gap: 28px;
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+}
+
+.postcard-text h3 {
+  margin: 0 0 18px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.postcard-meta {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.postcard-meta div {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.postcard-meta dt {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.postcard-meta dd {
+  margin: 0;
+  font-size: 15px;
+}
+
+.postcard-photo {
+  margin: 0;
+}
+
+.postcard-photo img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--line);
+  background: var(--soft);
+}
+
 .track-list {
   display: grid;
   gap: 0;
@@ -278,5 +344,14 @@ body {
   .album-track {
     grid-template-columns: 30px 34px minmax(0, 1fr);
     gap: 10px;
+  }
+
+  .postcard-entry {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .postcard-photo {
+    max-width: 240px;
   }
 }
