@@ -15,10 +15,12 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 ├── postcards/
 ├── beats/
 │   ├── volume-1/
-│   └── volume-2/
+│   ├── volume-2/
+│   └── volume-3/
 ├── audio/
 │   ├── beat-tape-volume-1/
-│   └── beat-tape-volume-2/
+│   ├── beat-tape-volume-2/
+│   └── beat-tape-volume-3/
 └── README.md
 ```
 
@@ -65,11 +67,13 @@ images/postcards/card-001-back.jpg
 
 * `Beat Tape Volume 1` → `/beats/volume-1/`
 * `Beat Tape Volume 2` → `/beats/volume-2/`
+* `Beat Tape Volume 3` → `/beats/volume-3/`
 
 音源ファイルは以下に置きます。
 
 * Volume 1: `audio/beat-tape-volume-1/`
 * Volume 2: `audio/beat-tape-volume-2/`
+* Volume 3: `audio/beat-tape-volume-3/`
 
 ファイル名は、スペースなしの半角英数字にします。
 

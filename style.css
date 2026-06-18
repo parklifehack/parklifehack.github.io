@@ -271,7 +271,7 @@ body {
 
 .album-track {
   display: grid;
-  grid-template-columns: 32px 38px minmax(0, 1fr);
+  grid-template-columns: 32px 38px minmax(0, 1fr) auto;
   gap: 12px;
   align-items: center;
   min-height: 48px;
@@ -320,6 +320,22 @@ body {
   line-height: 1.4;
 }
 
+.track-duration {
+  justify-self: end;
+  color: var(--muted);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.album-total {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 14px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
 @media (max-width: 520px) {
   .page {
     padding-top: 34px;
@@ -339,7 +355,7 @@ body {
   }
 
   .album-track {
-    grid-template-columns: 30px 34px minmax(0, 1fr);
+    grid-template-columns: 30px 34px minmax(0, 1fr) auto;
     gap: 10px;
   }
 
