@@ -105,6 +105,19 @@ body {
   color: var(--ink);
 }
 
+.site-footer {
+  width: min(calc(100% - 40px), 680px);
+  margin: -24px auto 0;
+  padding: 0 0 28px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.site-footer small {
+  font-size: inherit;
+}
+
 .page-title {
   margin: 0 0 42px;
   font-size: clamp(28px, 8vw, 52px);
