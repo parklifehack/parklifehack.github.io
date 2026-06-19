@@ -75,6 +75,14 @@ body {
   text-decoration-color: #b9b1a7;
 }
 
+.home-icon {
+  display: inline-block;
+  width: 1.4em;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9em;
+  text-align: center;
+}
+
 .subpage {
   width: min(100%, 680px);
   margin: 0 auto;
