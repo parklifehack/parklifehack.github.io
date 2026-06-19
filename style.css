@@ -75,12 +75,17 @@ body {
   text-decoration-color: #b9b1a7;
 }
 
-.home-icon {
-  display: inline-block;
-  width: 1.4em;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.9em;
-  text-align: center;
+.home-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+}
+
+.home-pixel-icon {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  image-rendering: pixelated;
 }
 
 .subpage {
