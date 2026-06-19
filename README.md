@@ -57,6 +57,7 @@ images/postcards/card-001-back.jpg
 * 個人情報を隠した背面写真
 
 `postcards/index.html` の `.postcard-table tbody` 内に、コメントで残している `<tr>` テンプレートをコピーして追加します。
+新しい記録は、既存の最新行より上に追加します。
 
 ## ビートテープに曲を追加する
 
@@ -65,6 +66,8 @@ images/postcards/card-001-back.jpg
 * `Beat Tape Volume 1` → `/beats/volume-1/`
 * `Beat Tape Volume 2` → `/beats/volume-2/`
 * `Beat Tape Volume 3` → `/beats/volume-3/`
+
+`beats/index.html` の一覧は、新しいVolumeが上に来る順番にします。
 
 音源ファイルは以下に置きます。
 
