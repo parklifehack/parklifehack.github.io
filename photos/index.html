@@ -3,25 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>写真 - parklifeduck</title>
-  <meta name="description" content="街で見た文字、壁、光の記録。">
+  <title>Photos - parklifeduck</title>
+  <meta name="description" content="Selected photo archive.">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
   <main class="page">
-    <section class="subpage" aria-label="写真">
+    <section class="subpage photo-archive" aria-label="Photos">
       <a class="back-link" href="../">← parklifeduck</a>
-      <h1 class="page-title">写真</h1>
-
-      <div class="entry-list">
-        <article class="entry">
-          <time datetime="2026-05-29">2026.05.29</time>
-          <h2>Jersey City Main Post Office</h2>
-          <p>古い案内板。トップページに置いた最初の写真。</p>
-        </article>
-      </div>
+      <p class="empty-note">No photos yet.</p>
     </section>
   </main>
+  <div class="photo-modal" id="photo-modal" aria-hidden="true">
+    <div class="photo-modal-bar"><button type="button" id="photo-close">Close</button></div>
+    <div class="photo-modal-stage" id="photo-stage"></div>
+    <div class="photo-modal-nav">
+      <button type="button" id="photo-prev">Prev</button>
+      <button type="button" id="photo-next">Next</button>
+    </div>
+  </div>
   <footer class="site-footer"><small>&copy; parklifeduck</small></footer>
+  <script>
+  const photos = [];
+  let current = 0;
+  const modal = document.getElementById("photo-modal");
+  const stage = document.getElementById("photo-stage");
+  function render(index) {
+    if (!photos.length) return;
+    current = (index + photos.length) % photos.length;
+    stage.innerHTML = "";
+    const img = document.createElement("img");
+    img.src = photos[current].url;
+    img.alt = "";
+    stage.appendChild(img);
+  }
+  function openPhoto(index) {
+    render(index);
+    modal.classList.add("is-open");
+    modal.setAttribute("aria-hidden", "false");
+  }
+  function closePhoto() {
+    modal.classList.remove("is-open");
+    modal.setAttribute("aria-hidden", "true");
+    stage.innerHTML = "";
+  }
+  document.querySelectorAll("[data-index]").forEach((button) => {
+    button.addEventListener("click", () => openPhoto(Number(button.dataset.index)));
+  });
+  document.getElementById("photo-close").addEventListener("click", closePhoto);
+  document.getElementById("photo-prev").addEventListener("click", () => render(current - 1));
+  document.getElementById("photo-next").addEventListener("click", () => render(current + 1));
+  document.addEventListener("keydown", (event) => {
+    if (!modal.classList.contains("is-open")) return;
+    if (event.key === "Escape") closePhoto();
+    if (event.key === "ArrowLeft") render(current - 1);
+    if (event.key === "ArrowRight") render(current + 1);
+  });
+  </script>
 </body>
 </html>
