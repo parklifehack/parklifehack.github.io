@@ -88,6 +88,17 @@ body {
   image-rendering: pixelated;
 }
 
+.home-pixel-mark {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  image-rendering: pixelated;
+  background:
+    linear-gradient(#171717 0 0) 4px 4px / 10px 10px no-repeat,
+    linear-gradient(#ffffff 0 0) 6px 6px / 6px 6px no-repeat;
+  border: 1px solid #171717;
+}
+
 .subpage {
   width: min(100%, 680px);
   margin: 0 auto;
@@ -233,26 +244,6 @@ body {
   height: 100%;
   display: block;
   object-fit: cover;
-}
-
-.photo-archive h2 {
-  margin: 46px 0 8px;
-  font-size: 32px;
-  font-weight: 400;
-}
-
-.photo-archive h3 {
-  margin: 28px 0 8px;
-  color: var(--muted);
-  font-size: 20px;
-  font-weight: 400;
-}
-
-.photo-archive h4 {
-  margin: 18px 0 10px;
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 400;
 }
 
 .photo-grid {
