@@ -480,12 +480,78 @@ body {
   }
 
   .postcard-table {
-    min-width: 600px;
+    display: block;
+    min-width: 0;
+  }
+
+  .postcard-table thead {
+    display: none;
+  }
+
+  .postcard-table tbody {
+    display: grid;
+  }
+
+  .postcard-table tbody tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 74px;
+    grid-template-areas:
+      "card photo"
+      "written photo"
+      "postmarked photo"
+      "place photo";
+    column-gap: 12px;
+    row-gap: 2px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .postcard-table th,
   .postcard-table td {
-    padding-top: 13px;
-    padding-bottom: 13px;
+    min-width: 0;
+    padding: 0;
+    border-bottom: 0;
+    font-size: 13px;
+    line-height: 1.55;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .postcard-table tbody th {
+    grid-area: card;
+  }
+
+  .postcard-table tbody td:nth-of-type(1) {
+    grid-area: written;
+  }
+
+  .postcard-table tbody td:nth-of-type(1)::before {
+    content: "written ";
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .postcard-table tbody td:nth-of-type(2) {
+    grid-area: postmarked;
+  }
+
+  .postcard-table tbody td:nth-of-type(2)::before {
+    content: "postmarked ";
+    color: var(--muted);
+    font-size: 11px;
+  }
+
+  .postcard-table tbody td:nth-of-type(3) {
+    grid-area: place;
+  }
+
+  .postcard-table tbody td:nth-of-type(4) {
+    grid-area: photo;
+    justify-self: end;
+  }
+
+  .postcard-thumb {
+    width: 74px;
+    height: 54px;
   }
 }
