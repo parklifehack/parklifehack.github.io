@@ -187,6 +187,69 @@ body {
   border-top: 1px solid var(--line);
 }
 
+.postcard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 10px;
+  padding-top: 14px;
+}
+
+.postcard-card {
+  min-width: 0;
+}
+
+.postcard-card-link {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.postcard-card-link:active {
+  opacity: 0.72;
+}
+
+.postcard-card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--soft);
+}
+
+.postcard-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.postcard-card-no {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.2;
+}
+
+.postcard-card-place {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.postcard-card-date,
+.postcard-card-mark {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.2;
+}
+
 .postcard-table-wrap {
   overflow-x: auto;
   border-top: 1px solid var(--line);
@@ -548,6 +611,31 @@ body {
   .postcard-table tbody td:nth-of-type(4) {
     grid-area: photo;
     justify-self: end;
+  }
+
+  .postcard-grid {
+    gap: 11px 7px;
+    padding-top: 10px;
+  }
+
+  .postcard-card-no {
+    margin-top: 3px;
+    font-size: 10px;
+  }
+
+  .postcard-card-place {
+    font-size: 12px;
+  }
+
+  .postcard-card-date,
+  .postcard-card-mark,
+  .postcard-code {
+    font-size: 10px;
+    line-height: 1.18;
+  }
+
+  .postcard-card-mark {
+    white-space: nowrap;
   }
 
   .postcard-thumb {
