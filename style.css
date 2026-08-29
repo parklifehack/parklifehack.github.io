@@ -391,6 +391,33 @@ body {
   display: block;
 }
 
+.handwriting-page {
+  width: min(100%, 980px);
+}
+
+.handwriting-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.handwriting-sheet {
+  margin: 0;
+}
+
+.handwriting-sheet a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.handwriting-sheet img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: var(--soft);
+}
+
 .track-list {
   display: grid;
   gap: 0;
@@ -641,5 +668,9 @@ body {
   .postcard-thumb {
     width: 74px;
     height: 54px;
+  }
+
+  .handwriting-stack {
+    gap: 12px;
   }
 }

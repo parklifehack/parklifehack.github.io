@@ -11,6 +11,7 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 ├── images/
 ├── bread/
 ├── photos/
+├── handwriting/
 ├── books/
 ├── postcards/
 ├── beats/
@@ -32,12 +33,28 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 
 ## トピック
 
-トップページには現在、以下の2つだけをリンクしています。
+トップページには現在、以下をリンクしています。
 
 * `Postcards` → `/postcards/`
+* `Photos` → `/photos/`
+* `Handwriting` → `/handwriting/`
 * `Beats` → `/beats/`
 
 `bread/`、`photos/`、`books/` のページは、ストックができたときに再利用できるよう残しています。
+
+## 手書きスキャンを追加する
+
+手書きスキャンは `/handwriting/` に置きます。
+画像は1枚で横幅を使い、縦に並べて読めるようにしています。
+
+公開用画像は以下に置きます。
+
+```text
+images/handwriting/scan-2026-08-28-1.jpg
+```
+
+`handwriting/index.html` の `.handwriting-stack` 内に、同じ形の
+`<figure class="handwriting-sheet">` を追加します。
 
 ## ハガキの記録を追加する
 
