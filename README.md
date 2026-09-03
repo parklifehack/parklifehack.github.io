@@ -96,8 +96,22 @@ WAVはサイズが大きくなりやすいので、公開用はMP3かM4Aがお�
 
 GitHub Pages単体ではWebサーバーの生ログやページ別の詳細アクセス解析は取れません。手元から確認できる範囲として、GitHubのTraffic APIでRepo単位の直近14日分のviews/clones、popular paths、referrersを確認します。
 
+Fine-grained personal access tokenを作り、対象Repoを
+`parklifehack/parklifehack.github.io` のみにし、Repository permissionsは
+`Administration: Read-only` にします。GitHubのTraffic APIはこの権限を要求します。
+
+初回だけMacのKeychainに保存します。
+
 ```bash
-GITHUB_TOKEN=... python3 tools/github_traffic.py
+read -s GITHUB_TRAFFIC_TOKEN
+security add-generic-password -U -a "$USER" -s parklifehack_github_traffic_token -w "$GITHUB_TRAFFIC_TOKEN"
+unset GITHUB_TRAFFIC_TOKEN
+```
+
+以後は以下だけで確認できます。
+
+```bash
+python3 tools/github_traffic.py
 ```
 
 このAPIは書き込み権限のあるRepoで使うものです。細かいページ別・地域別・端末別まで見たい場合は、Cloudflare Web Analytics、Plausible、GoatCounterなどの外部アクセス解析をサイトに埋め込む必要があります。

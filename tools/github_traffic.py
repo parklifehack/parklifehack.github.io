@@ -7,6 +7,8 @@ import sys
 import urllib.error
 import urllib.request
 
+KEYCHAIN_SERVICE = "parklifehack_github_traffic_token"
+
 
 def repo_from_remote():
     try:
@@ -38,6 +40,18 @@ def github_get(owner, repo, endpoint, token):
         return json.load(res)
 
 
+def token_from_keychain():
+    try:
+        token = subprocess.check_output(
+            ["security", "find-generic-password", "-s", KEYCHAIN_SERVICE, "-w"],
+            text=True,
+            stderr=subprocess.DEVNULL,
+        ).strip()
+    except Exception:
+        return None
+    return token or None
+
+
 def print_daily(title, data, rows_key):
     print(f"\n## {title}")
     total = data.get("count", 0)
@@ -65,10 +79,14 @@ def print_ranked(title, rows, name_key):
 
 
 def main():
-    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN") or token_from_keychain()
     if not token:
-        print("Set GITHUB_TOKEN or GH_TOKEN first.", file=sys.stderr)
-        print("The token needs read access to repository traffic.", file=sys.stderr)
+        print("No GitHub traffic token found.", file=sys.stderr)
+        print("Create a fine-grained token for this repo with Administration: read.", file=sys.stderr)
+        print("Then store it in macOS Keychain:", file=sys.stderr)
+        print("  read -s GITHUB_TRAFFIC_TOKEN", file=sys.stderr)
+        print(f"  security add-generic-password -U -a \"$USER\" -s {KEYCHAIN_SERVICE} -w \"$GITHUB_TRAFFIC_TOKEN\"", file=sys.stderr)
+        print("  unset GITHUB_TRAFFIC_TOKEN", file=sys.stderr)
         return 2
 
     repo = repo_from_remote()
