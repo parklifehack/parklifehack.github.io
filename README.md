@@ -13,7 +13,6 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 ├── photos/
 ├── handwriting/
 ├── books/
-├── postcards/
 ├── beats/
 │   ├── volume-1/
 │   ├── volume-2/
@@ -35,7 +34,6 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 
 トップページには現在、以下をリンクしています。
 
-* `Postcards` → `/postcards/`
 * `Photos` → `/photos/`
 * `Handwriting` → `/handwriting/`
 * `Beats` → `/beats/`
@@ -56,33 +54,13 @@ images/handwriting/scan-2026-08-28-1.jpg
 `handwriting/index.html` の `.handwriting-stack` 内に、同じ形の
 `<figure class="handwriting-sheet">` を追加します。
 
-## ハガキの記録を追加する
-
-自分宛てのハガキは `/postcards/` に置きます。
-
-写真は、住所・名前・郵便番号・バーコードなど個人情報が見えないように加工し、できればハガキ部分だけにクロップしてから、以下に置きます。
-
-```text
-images/postcards/card-001-back.jpg
-```
-
-記録する項目は、まず以下です。
-
-* 書いた日
-* 郵便局で処理された日付と時間
-* 処理場所の数字やコード
-* 個人情報を隠した背面写真
-
-`postcards/index.html` の `.postcard-table tbody` 内に、コメントで残している `<tr>` テンプレートをコピーして追加します。
-新しい記録は、既存の最新行より上に追加します。
-
 ## ビートテープに曲を追加する
 
 ビートテープ用のページは以下です。
 
-* `Beat Tape Volume 1` → `/beats/volume-1/`
-* `Beat Tape Volume 2` → `/beats/volume-2/`
-* `Beat Tape Volume 3` → `/beats/volume-3/`
+* `Vol. 1` → `/beats/volume-1/`
+* `Vol. 2` → `/beats/volume-2/`
+* `Vol. 3` → `/beats/volume-3/`
 
 `beats/index.html` の一覧は、新しいVolumeが上に来る順番にします。
 
@@ -113,6 +91,16 @@ audio/beat-tape-volume-1/02-window-light.mp3
 ```
 
 WAVはサイズが大きくなりやすいので、公開用はMP3かM4Aがおすすめです。GitHubは大きいファイルに向いていないため、1曲あたり数MBから十数MB程度に抑えるのが扱いやすいです。
+
+## アクセス確認
+
+GitHub Pages単体ではWebサーバーの生ログやページ別の詳細アクセス解析は取れません。手元から確認できる範囲として、GitHubのTraffic APIでRepo単位の直近14日分のviews/clones、popular paths、referrersを確認します。
+
+```bash
+GITHUB_TOKEN=... python3 tools/github_traffic.py
+```
+
+このAPIは書き込み権限のあるRepoで使うものです。細かいページ別・地域別・端末別まで見たい場合は、Cloudflare Web Analytics、Plausible、GoatCounterなどの外部アクセス解析をサイトに埋め込む必要があります。
 
 ## 名前とURL
 
