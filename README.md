@@ -34,9 +34,9 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 
 トップページには現在、以下をリンクしています。
 
-* `Photos` → `/photos/`
-* `Handwriting` → `/handwriting/`
-* `Beats` → `/beats/`
+* `parklifepics` → `/photos/`
+* `parklifewrites` → `/handwriting/`
+* `parklifebeats` → `/beats/`
 
 `bread/`、`photos/`、`books/` のページは、ストックができたときに再利用できるよう残しています。
 
@@ -58,9 +58,9 @@ images/handwriting/scan-2026-08-28-1.jpg
 
 ビートテープ用のページは以下です。
 
-* `Vol. 1` → `/beats/volume-1/`
-* `Vol. 2` → `/beats/volume-2/`
-* `Vol. 3` → `/beats/volume-3/`
+* `Beat Tape Vol. 1` → `/beats/volume-1/`
+* `Beat Tape Vol. 2` → `/beats/volume-2/`
+* `Beat Tape Vol. 3` → `/beats/volume-3/`
 
 `beats/index.html` の一覧は、新しいVolumeが上に来る順番にします。
 
