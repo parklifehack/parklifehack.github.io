@@ -10,10 +10,10 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 ├── style.css
 ├── images/
 ├── bread/
-├── photos/
-├── handwriting/
+├── parklifepics/
+├── parklifewrites/
 ├── books/
-├── beats/
+├── parklifebeats/
 │   ├── volume-1/
 │   ├── volume-2/
 │   └── volume-3/
@@ -23,6 +23,8 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 │   └── beat-tape-volume-3/
 └── README.md
 ```
+
+`photos/`、`handwriting/`、`beats/` は旧URLから新URLへ転送するためだけに残しています。
 
 ## 写真を置く
 
@@ -34,15 +36,15 @@ GitHub Pagesで公開する、小さい個人用の静的サイトです。
 
 トップページには現在、以下をリンクしています。
 
-* `parklifepics` → `/photos/`
-* `parklifewrites` → `/handwriting/`
-* `parklifebeats` → `/beats/`
+* `Photos` → `/parklifepics/`
+* `Handwriting` → `/parklifewrites/`
+* `Beats` → `/parklifebeats/`
 
-`bread/`、`photos/`、`books/` のページは、ストックができたときに再利用できるよう残しています。
+`bread/`、`books/` のページは、ストックができたときに再利用できるよう残しています。
 
 ## 手書きスキャンを追加する
 
-手書きスキャンは `/handwriting/` に置きます。
+手書きスキャンは `/parklifewrites/` に置きます。
 画像は1枚で横幅を使い、縦に並べて読めるようにしています。
 
 公開用画像は以下に置きます。
@@ -58,11 +60,11 @@ images/handwriting/scan-2026-08-28-1.jpg
 
 ビートテープ用のページは以下です。
 
-* `Beat Tape Vol. 1` → `/beats/volume-1/`
-* `Beat Tape Vol. 2` → `/beats/volume-2/`
-* `Beat Tape Vol. 3` → `/beats/volume-3/`
+* `Beat Tape Vol. 1` → `/parklifebeats/volume-1/`
+* `Beat Tape Vol. 2` → `/parklifebeats/volume-2/`
+* `Beat Tape Vol. 3` → `/parklifebeats/volume-3/`
 
-`beats/index.html` の一覧は、新しいVolumeが上に来る順番にします。
+`parklifebeats/index.html` の一覧は、新しいVolumeが上に来る順番にします。
 
 音源ファイルは以下に置きます。
 
@@ -77,7 +79,7 @@ audio/beat-tape-volume-1/01-night-loop.mp3
 audio/beat-tape-volume-1/02-window-light.mp3
 ```
 
-曲をページに表示するには、該当する `beats/volume-1/index.html` または `beats/volume-2/index.html` の `.track-list` 内に、以下の形で追加します。
+曲をページに表示するには、該当する `parklifebeats/volume-1/index.html` または `parklifebeats/volume-2/index.html` の `.track-list` 内に、以下の形で追加します。
 
 ```html
 <article class="track">
