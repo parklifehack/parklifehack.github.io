@@ -176,6 +176,12 @@ body {
   text-underline-offset: 0.22em;
 }
 
+.entry-year {
+  margin-left: 0.25em;
+  color: var(--muted);
+  font-size: 0.72em;
+}
+
 .entry p {
   max-width: 31em;
   margin: 0;
