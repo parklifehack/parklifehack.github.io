@@ -178,8 +178,8 @@ body {
 
 .entry-year {
   margin-left: 0.25em;
-  color: var(--muted);
-  font-size: 0.72em;
+  color: #a8a8a8;
+  font-size: 0.62em;
 }
 
 .entry p {
